@@ -30,12 +30,16 @@ COPY . /var/www/html/
 # Remove composer.lock if it exists to avoid version constraints
 RUN rm -f /var/www/html/composer.lock
 
-# Install Composer dependencies, forcing the latest version of yt-dlp
+# Update the composer.json to require the latest yt-dlp version
+RUN php composer.phar config "minimum-stability" "dev" && \
+    php composer.phar config "prefer-stable" true && \
+    php composer.phar require "yt-dlp/yt-dlp:*" --no-update
+
+# Install Composer dependencies without the lock file
 RUN php composer.phar install --prefer-dist --no-progress --no-dev --optimize-autoloader
 
 # Update to the latest version of yt-dlp, ignoring constraints
-RUN php composer.phar require yt-dlp/yt-dlp:* --no-update && \
-    php composer.phar update yt-dlp/yt-dlp --with-all-dependencies --prefer-dist --no-progress --no-dev --optimize-autoloader
+RUN php composer.phar update yt-dlp/yt-dlp --with-all-dependencies --prefer-dist --no-progress --no-dev --optimize-autoloader
 
 # Check platform requirements
 RUN php composer.phar check-platform-reqs --no-dev
