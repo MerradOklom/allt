@@ -16,10 +16,10 @@ params:
     - default,-generic
 
 # True to enable audio conversion
-convert: false
+convert: true
 
 # True to enable advanced conversion mode
-convertAdvanced: false
+convertAdvanced: true
 
 # List of formats available in advanced conversion mode
 convertAdvancedFormats: [mp3, avi, flv, wav]
@@ -38,10 +38,10 @@ uglyUrls: false
 
 # True to stream videos through server
 # Set to "ask" if you want to allow it but not enable by default.
-stream: false
+stream: ask
 
 # True to enable remux mode (merge best audio and best video)
-remux: false
+remux: true
 
 # MP3 bitrate when converting (in kbit/s)
 audioBitrate: 128
@@ -56,7 +56,7 @@ genericFormats:
     worst/worstvideo: Worst
 
 # Enable debug mode.
-debug: false
+debug: true
 
 # True to enable audio conversion mode by default
 defaultAudio: false
