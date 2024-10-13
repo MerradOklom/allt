@@ -63,10 +63,10 @@
       "type": "package",
       "package": {
         "name": "yt-dlp/yt-dlp",
-        "version": "2024.10.07",
+        "version": "2023.03.04",
         "dist": {
           "type": "tar",
-          "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2024.10.07/yt-dlp.tar.gz"
+          "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2023.03.04/yt-dlp.tar.gz"
         }
       }
     }
