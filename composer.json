@@ -37,7 +37,7 @@
     "symfony/translation": "^4.0",
     "symfony/yaml": "^4.0",
     "webfontkit/open-sans": "^1.0",
-    "yt-dlp/yt-dlp": "*",
+    "yt-dlp/yt-dlp": "^2023.03",
     "zonuexe/http-accept-language": "^0.4.1"
   },
   "require-dev": {
@@ -63,9 +63,10 @@
       "type": "package",
       "package": {
         "name": "yt-dlp/yt-dlp",
+        "version": "2024.10.07",
         "dist": {
           "type": "tar",
-          "url": "https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz"
+          "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2024.10.07/yt-dlp.tar.gz"
         }
       }
     }
