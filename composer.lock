@@ -3767,15 +3767,6 @@
             "time": "2014-08-20T20:43:34+00:00"
         },
         {
-            "name": "yt-dlp/yt-dlp",
-            "version": "2023.03.04",
-            "dist": {
-                "type": "tar",
-                "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2023.03.04/yt-dlp.tar.gz"
-            },
-            "type": "library"
-        },
-        {
             "name": "zonuexe/http-accept-language",
             "version": "0.4.1",
             "source": {
