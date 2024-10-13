@@ -27,9 +27,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --quiet
 COPY resources/php.ini /usr/local/etc/php/
 COPY . /var/www/html/
 
-# Install Composer dependencies
-RUN php composer.phar require yt-dlp/yt-dlp:* -W --no-update && \
-    php composer.phar update yt-dlp/yt-dlp --with-all-dependencies --prefer-dist --no-progress --no-dev --optimize-autoloader
+# Install Composer dependencies, ignoring existing versions in composer.json
+RUN php composer.phar update yt-dlp/yt-dlp --with-all-dependencies --prefer-dist --no-progress --no-dev --optimize-autoloader
 
 # Check platform requirements
 RUN php composer.phar check-platform-reqs --no-dev
